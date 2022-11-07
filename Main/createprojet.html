@@ -24,10 +24,9 @@
         </button>
       </div>
       <div class="p-4">
-        <h1><a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/index.html" class="logo">Organize, Create and
-            Control</a></h1>
+        <h1><a href="main.html" class="logo">Organize, Create and Control</a></h1>
         <ul class="list-unstyled components mb-5">
-          <li class="active">
+          <!-- <li class="active">
             <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span class="fa fa-home mr-3"></span>
               Users</a>
           </li>
@@ -38,10 +37,96 @@
           <li>
             <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span
                 class="fa fa-briefcase mr-3"></span> All Projet</a>
-          </li>
-          <button type="button" class="btn btn-dark">+ User</button>
-          <button type="button" class="btn btn-dark">+ Projet</button>
-        </ul>
+          </li> -->
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">
+                  User
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+
+                  <li>
+                    <button type="button" class="btn btn-light">User1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">User2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">User3</button>
+                  </li>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo">
+                  Your Projet
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 3</button>
+                  </li>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree">
+                  All Projet
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 1</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 2</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 3</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 10</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 20</button>
+                  </li>
+                  <li>
+                    <button type="button" class="btn btn-light">Projet 30</button>
+                  </li>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary btn-dark" href="createuser.html" role="button">+ User</a>
+          <a class="btn btn-primary btn-dark" href="createprojet.html" role="button">+ Projet</a>
+</ul>
 
         <div class="footer">
 
@@ -59,9 +144,9 @@
           <label for="ProjetDescription" class="form-label">Projet Description</label>
           <input type="text" class="form-control" id="inputprojetdescription" aria-describedby="ProjetDescrip">
         </div>
-        
-
         <button type="submit" class="btn btn-primary">Ajouter</button>
+
+
       </form>
     </div>
   </div>
@@ -73,8 +158,11 @@
     integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
     data-cf-beacon="{&quot;rayId&quot;:&quot;766757cd8a406db9&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2022.11.0&quot;,&quot;si&quot;:100}"
     crossorigin="anonymous"></script>
-
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </body>
 
