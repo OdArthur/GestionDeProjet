@@ -43,6 +43,13 @@
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="accordion-body">
 
+                                    <?php foreach ($Users as $User_ID => $User) : ?>
+                                        <li>
+                                            <button type="button" class="btn btn-light"> <?= $User['Username']; ?> </button>
+                                        </li>
+                                    <?php endforeach; ?>
+<!-- 
+
                                     <li>
                                         <button type="button" class="btn btn-light">User1</button>
                                     </li>
@@ -51,7 +58,7 @@
                                     </li>
                                     <li>
                                         <button type="button" class="btn btn-light">User3</button>
-                                    </li>
+                                    </li> -->
 
                                 </div>
                             </div>

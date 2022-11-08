@@ -1,6 +1,5 @@
 <?php
 try {
-    print "Get db";
 	$host = 'mysql-aodin.alwaysdata.net'; // Adresse de la base de données
 	$name = 'aodin_gestionprojet'; // Nom de la base de données à utiliser
 	$user = 'aodin_gpco'; // Utilisateur de la base de données
