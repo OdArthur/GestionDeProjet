@@ -122,14 +122,14 @@
         </nav>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-      <form>
+      <form method="POST" action="AddProject.php">
         <div class="mb-3">
           <label for="ProjetName" class="form-label">Projet name</label>
-          <input type="text" class="form-control" id="inputprojetname" aria-describedby="ProjetName">
+          <input type="text" name="Title" class="form-control" id="inputprojetname" aria-describedby="ProjetName">
         </div>
         <div class="mb-3">
           <label for="ProjetDescription" class="form-label">Projet Description</label>
-          <input type="text" class="form-control" id="inputprojetdescription" aria-describedby="ProjetDescrip">
+          <input type="text" name="Description" class="form-control" id="inputprojetdescription" aria-describedby="ProjetDescrip">
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
 

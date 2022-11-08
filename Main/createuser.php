@@ -122,23 +122,23 @@
         </nav>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-      <form>
+      <form method="POST" action="AddUser.php">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Username</label>
-          <input type="text" class="form-control" id="inputusername" aria-describedby="UsernameAre">
+          <input type="text" name="username" class="form-control" id="inputusername" aria-describedby="UsernameAre">
         </div>
         <div class="mb-3">
           <label for="inputpassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="InputPassord">
+          <input type="password" name="password" class="form-control" id="InputPassord">
           <div id="username" class="form-text">We'll never share your Password with anyone else.</div>
         </div>
         <div class="mb-3">
           <label for="inputpassword" class="form-label">Rôle</label>
           <div class="mb-3 form-check">
-            <select class="form-select" aria-label="Default select grade">
-              <option selected value="1">Employé</option>
-              <option value="2">Manager</option>
-              <option value="3">Admin</option>
+            <select name="privilege" class="form-select" aria-label="Default select grade">
+              <option selected value="0">Employé</option>
+              <option value="1">Manager</option>
+              <option value="2  ">Admin</option>
             </select>
           </div>
         </div>
