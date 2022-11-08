@@ -7,12 +7,7 @@
     <title>OCC</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style id="" media="all">
-        /* devanagari */
-    </style>
-    <link rel="stylesheet" href="../Main/main_files/font-awesome.min.css">
-    <link rel="stylesheet" href="../Main/main_files/style.css">
-    <meta name="robots" content="noindex, follow">
+</head>
 
 <body>
     <div class="wrapper d-flex align-items-stretch">
@@ -24,7 +19,7 @@
                 </button>
             </div>
             <div class="p-4">
-                <h1><a href="main.html" class="logo">Organize, Create and Control</a></h1>
+                <h1><a href="../public/main.php" class="logo">Organize, Create and Control</a></h1>
                 <ul class="list-unstyled components mb-5">
                     <!-- <li class="active">
       <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span class="fa fa-home mr-3"></span>
@@ -115,8 +110,8 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn btn-primary btn-dark" href="createuser.html" role="button">+ User</a>
-                    <a class="btn btn-primary btn-dark" href="createprojet.html" role="button">+ Projet</a>
+                    <a class="btn btn-primary btn-dark" href="createuser.php" role="button">+ User</a>
+                    <a class="btn btn-primary btn-dark" href="createprojet.php" role="button">+ Projet</a>
 
                 </ul>
 
@@ -141,15 +136,6 @@
 
         </div>
     </div>
-    <script src="./main_files/jquery.min.js.téléchargé"></script>
-    <script src="./main_files/popper.js.téléchargé"></script>
-    <script src="./main_files/bootstrap.min.js.téléchargé"></script>
-    <script src="./main_files/main.js.téléchargé"></script>
-    <script defer="" src="./main_files/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon="{&quot;rayId&quot;:&quot;766757cd8a406db9&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2022.11.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>
