@@ -48,6 +48,9 @@
                                             <button type="button" class="btn btn-light"> <?= $User['Username']; ?> </button>
                                         </li>
                                     <?php endforeach; ?>
+
+
+
 <!-- 
 
                                     <li>
@@ -72,7 +75,9 @@
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body">
 
-                                    <li>
+                                    
+
+                                    <!--<li>
                                         <button type="button" class="btn btn-light">Projet 1</button>
                                     </li>
                                     <li>
@@ -80,7 +85,7 @@
                                     </li>
                                     <li>
                                         <button type="button" class="btn btn-light">Projet 3</button>
-                                    </li>
+                                    </li>-->
 
                                 </div>
                             </div>
@@ -94,6 +99,13 @@
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                                 <div class="accordion-body">
 
+                                    <?php foreach ($Projects as $Project_ID => $Project) : ?>
+                                        <li>
+                                            <button type="button" class="btn btn-light"> <?= $Project['Title']; ?> </button>
+                                        </li>
+                                    <?php endforeach; ?>
+                                    
+<!--
                                     <li>
                                         <button type="button" class="btn btn-light">Projet 1</button>
                                     </li>
@@ -111,7 +123,7 @@
                                     </li>
                                     <li>
                                         <button type="button" class="btn btn-light">Projet 30</button>
-                                    </li>
+                                    </li>-->
 
                                 </div>
                             </div>
