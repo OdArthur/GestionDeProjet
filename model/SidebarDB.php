@@ -4,6 +4,10 @@ $query = $dbh->prepare('SELECT * FROM `users` ORDER BY `ID` ASC');
 $query->execute();
 $Users = $query -> fetchAll();
 
+$query = $dbh->prepare('SELECT * FROM `project` ORDER BY `ID` ASC');
+$query->execute();
+$Projects = $query -> fetchAll();
+
 
 /*
 $categories=array();
