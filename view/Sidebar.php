@@ -20,8 +20,11 @@
       <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span
           class="fa fa-briefcase mr-3"></span> All Projet</a>
     </li> -->
+    
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item">
+
+
+                        <div class="accordion-item" style="display : <?php echo 2 == $_SESSION['Privilege'] ? 'block' : 'none' ?>;">
                             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                     User
@@ -35,24 +38,10 @@
                                             <button type="button" class="btn btn-light"> <?= $User['Username']; ?> </button>
                                         </li>
                                     <?php endforeach; ?>
-
-
-
-<!-- 
-
-                                    <li>
-                                        <button type="button" class="btn btn-light">User1</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">User2</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">User3</button>
-                                    </li> -->
-
                                 </div>
                             </div>
                         </div>
+
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -61,19 +50,6 @@
                             </h2>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                                 <div class="accordion-body">
-
-                                    
-
-                                    <!--<li>
-                                        <button type="button" class="btn btn-light">Projet 1</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 2</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 3</button>
-                                    </li>-->
-
                                 </div>
                             </div>
                         </div>
@@ -91,27 +67,6 @@
                                             <button type="button" class="btn btn-light"> <?= $Project['Title']; ?> </button>
                                         </li>
                                     <?php endforeach; ?>
-                                    
-<!--
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 1</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 2</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 3</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 10</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 20</button>
-                                    </li>
-                                    <li>
-                                        <button type="button" class="btn btn-light">Projet 30</button>
-                                    </li>-->
-
                                 </div>
                             </div>
                         </div>

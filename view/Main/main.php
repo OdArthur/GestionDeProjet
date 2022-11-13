@@ -13,7 +13,7 @@
     <div class="wrapper d-flex align-items-stretch">
         
         <?php
-        include __DIR__ . '/../Main/Sidebar.php';
+        include __DIR__ . '/../Sidebar.php';
         ?> 
 
         <div id="content" class="p-4 p-md-5 pt-5">
