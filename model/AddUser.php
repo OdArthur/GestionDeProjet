@@ -8,7 +8,7 @@ function createUser($dbh, $user) {
         $query = $dbh->prepare('INSERT INTO users (Username, Password, Privilege) VALUES (:username, :password, :privilege)');
         return $query->execute([
             ':username' => $user['username'],
-            ':password'=> $user['password'],
+            ':password'=> password_hash($user['password'], PASSWORD_DEFAULT),
             ':privilege' => $user['privilege']
         ]);
     }
