@@ -6,6 +6,6 @@ include __DIR__ . '/../database/db.php';
  include __DIR__ . '/../model/SidebarDB.php';
 // include view
 // include(__DIR__ . '/../view/top.html');
-include(__DIR__ . '/../Main/cssimport.php');
-include(__DIR__ . '/../Main/createprojet.php');
-include(__DIR__ . '/../Main/jsimport.php');
+include(__DIR__ . '/../view/cssimport.php');
+include(__DIR__ . '/../view/CreateItem/createprojet.php');
+include(__DIR__ . '/../view/jsimport.php');
