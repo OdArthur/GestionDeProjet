@@ -15,4 +15,4 @@ include __DIR__ . '/../model/AddProject.php';
     ];
     $result = createProject($dbh, $project);
 
-    //header('Location: /public/main.php');
+    header('Location: main.php');

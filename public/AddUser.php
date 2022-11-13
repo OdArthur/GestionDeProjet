@@ -11,4 +11,4 @@ include __DIR__ . '/../model/AddUser.php';
     ];
     $result = createUser($dbh, $user);
 	
-	//header('Location: main.php');
+	header('Location: main.php');
