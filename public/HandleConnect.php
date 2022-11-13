@@ -17,7 +17,6 @@ include __DIR__ . '/../model/HandleConnect.php';
         $_SESSION['Username'] = $connectedUser['username'];
         $_SESSION['Password'] = $connectedUser['password'];
         $_SESSION['Privilege'] = $connectedUser['privilege'];
-        print("I HAVE A USER !!!");
     }
 	
     header('Location: main.php');
