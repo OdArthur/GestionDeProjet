@@ -1,4 +1,7 @@
 <?php
+
+include __DIR__ . '/../view/checkconnection.php';
+
 // include db
 include __DIR__ . '/../database/db.php';
 // include model

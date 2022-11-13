@@ -1,4 +1,7 @@
 <?php
+
+include __DIR__ . '/../view/checkconnection.php';
+
 // ~/php/tp1/public/main.php
 // include database
 include __DIR__ . '/../database/db.php';
