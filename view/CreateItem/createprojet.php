@@ -5,13 +5,14 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>OCC</title>
+  <link rel="shortcut icon" href="../Assets/IconOCC.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
   <div class="wrapper d-flex align-items-stretch">
-        <?php
+    <?php
         include __DIR__ . '/../Sidebar.php';
         ?>
 
@@ -23,7 +24,8 @@
         </div>
         <div class="mb-3">
           <label for="ProjetDescription" class="form-label">Projet Description</label>
-          <input type="text" name="Description" class="form-control" id="inputprojetdescription" aria-describedby="ProjetDescrip">
+          <input type="text" name="Description" class="form-control" id="inputprojetdescription"
+            aria-describedby="ProjetDescrip">
         </div>
         <button type="submit" class="btn btn-primary">Ajouter</button>
 
