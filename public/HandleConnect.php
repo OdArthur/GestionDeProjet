@@ -1,8 +1,9 @@
 <?php
+// ~/php/GestionDeProjet/public/HandleConnect.php
 // include db
-include __DIR__ . '/../database/db.php';
+include(__DIR__ . '/../database/db.php');
 // include model
-include __DIR__ . '/../model/HandleConnect.php';
+include(__DIR__ . '/../model/HandleConnect.php');
 
     $user = [
         'username' => htmlspecialchars($_POST['username']),
@@ -20,3 +21,5 @@ include __DIR__ . '/../model/HandleConnect.php';
     }
 	
     header('Location: main.php');
+
+//include view

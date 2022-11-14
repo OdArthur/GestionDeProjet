@@ -1,13 +1,10 @@
 <?php
-
-include __DIR__ . '/../view/checkconnection.php';
-
+// ~/php/GestionDeProjet/public/AddProject.php
+include(__DIR__ . '/../view/checkconnection.php');
 // include db
-include __DIR__ . '/../database/db.php';
+include(__DIR__ . '/../database/db.php');
 // include model
-include __DIR__ . '/../model/AddProject.php';
-
-
+include(__DIR__ . '/../model/AddProject.php');
 
     $project = [
         'Title' => htmlspecialchars($_POST['Title']),
@@ -18,3 +15,5 @@ include __DIR__ . '/../model/AddProject.php';
     $result = createProject($dbh, $project);
 
     header('Location: main.php');
+
+//include view

@@ -1,9 +1,10 @@
 <?php
-// ~/php/tp1/public/main.php
+// ~/php/GestionDeProjet/public/connexion.php
 // include database
-include __DIR__ . '/../database/db.php';
+include(__DIR__ . '/../database/db.php');
+// include model
+
 // include view
-// include(__DIR__ . '/../view/top.html');
-include(__DIR__ . '/../view/cssimport.php');
+include(__DIR__ . '/../css/cssimport.php');
 include(__DIR__ . '/../view/Connexion/Connexion.php');
-include(__DIR__ . '/../view/jsimport.php');
+include(__DIR__ . '/../javascript/jsimport.php');
