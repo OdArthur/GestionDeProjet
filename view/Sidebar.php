@@ -72,7 +72,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item">
+                <div class="accordion-item"
+                style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">
                     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
@@ -99,8 +100,8 @@
 
         <div class="footer align-bottom">
             <div class="d-flex flex-row justify-content-around align-items-end bd-highlight mb-3">
-                <a class="btn btn-dark container-fluid" href="createuser.php" role="button">+ User</a>
-                <a class="btn btn-dark container-fluid" href="createprojet.php" role="button">+ Projet</a>
+                <a class="btn btn-dark container-fluid" href="createuser.php" role="button" style="display : <?php echo 2 == $_SESSION['Privilege'] ? 'block' : 'none' ?>;">+ User</a>
+                <a class="btn btn-dark container-fluid" href="createprojet.php" role="button" style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">+ Projet</a>
             </div>
         </div>
     </div>
