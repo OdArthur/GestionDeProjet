@@ -38,14 +38,27 @@
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body">
 
-                            <?php foreach ($Users as $User_ID => $User): ?>
+                            <?php 
+                            if(5 < sizeof($Users))
+                            {
+                                $PreviewUsers = array_slice($Users, 0, 5, true);
+                            }
+                            else
+                            {
+                                $PreviewUsers = $Users;
+                            }
+                            foreach ($PreviewUsers as $User_ID => $User): ?>
                             <li>
                                 <button type="button" class="btn btn-light container-fluid mb-1">
                                     <?= $User['Username']; ?>
                                 </button>
                             </li>
-                            <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="AllUsers.php" role="button">All user</a>
+                            <?php endforeach;
+                            if(5 < sizeof($Users))
+                            {
+                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllUsers.php\" role=\"button\">All user</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -63,14 +76,26 @@
                         <div class="accordion-body">
                                <?php 
                                //include(__DIR__ . '/../model/GetYourProject.php');
-                               foreach($OwnedProjects as $OwnedProject_ID =>$Project):?>
+                               if(5 < sizeof($OwnedProjects))
+                               {
+                                $YourProjects = array_slice($OwnedProjects, 0, 5, true);
+                               }
+                               else
+                               {
+                                $YourProjects = $OwnedProjects;
+                               }
+                               foreach($YourProjects as $OwnedProject_ID =>$Project):?>
                             <li>
                                 <button type="button" class="btn btn-light container-fluid mb-1">
                                     <?= $Project['Title']; ?>
                                 </button>
                             </li>
-                            <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="AllYourProjects.php" role="button">All your projet</a>
+                            <?php endforeach;
+                            if(5 < sizeof($OwnedProjects))
+                            {
+                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllYourProjects.php\" role=\"button\">All your projet</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -87,14 +112,27 @@
                         aria-labelledby="panelsStayOpen-headingThree">
                         <div class="accordion-body">
 
-                            <?php foreach ($Projects as $Project_ID => $Project): ?>
+                            <?php 
+                            if (5 < sizeof($Projects))
+                            {
+                                $PreviewProjects = array_slice($Projects, 0, 5, true);
+                            }
+                            else
+                            {
+                                $PreviewProjects = $Projects;
+                            }
+                            foreach ($PreviewProjects as $Project_ID => $Project): ?>
                             <li>
                                 <button type="button" class="btn btn-light container-fluid mb-1">
                                     <?= $Project['Title']; ?>
                                 </button>
                             </li>
-                            <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="AllProjects.php" role="button">All projet</a>
+                            <?php endforeach;
+                            if(5 < sizeof($Projects))
+                            {
+                                echo"<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllProjects.php\" role=\"button\">All projet</a>";
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
