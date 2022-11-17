@@ -45,7 +45,7 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="createuser.php" role="button">All user</a>
+                            <a class="btn btn-dark container-fluid mb-1" href="AllUsers.php" role="button">All user</a>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="createprojet.php" role="button">All your projet</a>
+                            <a class="btn btn-dark container-fluid mb-1" href="AllYourProjects.php" role="button">All your projet</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
-                            <a class="btn btn-dark container-fluid mb-1" href="createprojet.php" role="button">All projet</a>
+                            <a class="btn btn-dark container-fluid mb-1" href="AllProjects.php" role="button">All projet</a>
                         </div>
                     </div>
                 </div>
