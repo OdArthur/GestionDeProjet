@@ -1,7 +1,5 @@
 <?php
-$query = $dbh->prepare('SELECT * FROM `project` ORDER BY `ID` ASC');
-$query->execute();
-$Projects = $query -> fetchAll();
+
 
 
 function createProject($dbh, $project) {

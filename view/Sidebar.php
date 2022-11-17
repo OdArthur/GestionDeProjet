@@ -60,6 +60,15 @@
                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
                         aria-labelledby="panelsStayOpen-headingTwo">
                         <div class="accordion-body">
+                               <?php 
+                               //include(__DIR__ . '/../model/GetYourProject.php');
+                               foreach($OwnedProjects as $OwnedProject_ID =>$Project):?>
+                            <li>
+                                <button type="button" class="btn btn-light container-fluid mb-1">
+                                    <?= $Project['Title']; ?>
+                                </button>
+                            </li>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>

@@ -8,6 +8,14 @@ $query = $dbh->prepare('SELECT * FROM `project` ORDER BY `ID` ASC');
 $query->execute();
 $Projects = $query -> fetchAll();
 
+$query = $dbh->prepare('SELECT * FROM project WHERE project.Owner_ID=:SessionID');
+
+     $query->execute([
+        
+        ':SessionID' => $_SESSION['ID']]
+    );
+$OwnedProjects = $query->fetchAll();
+
 
 /*
 $categories=array();
