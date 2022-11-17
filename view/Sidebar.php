@@ -28,7 +28,7 @@
                 <div class="accordion-item"
                     style="display : <?php echo 2 == $_SESSION['Privilege'] ? 'block' : 'none' ?>;">
                     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
                             aria-controls="panelsStayOpen-collapseOne">
                             User
@@ -45,13 +45,14 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
+                            <a class="btn btn-dark container-fluid mb-1" href="createuser.php" role="button">All user</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
                             aria-controls="panelsStayOpen-collapseTwo">
                             Your Projet
@@ -69,6 +70,7 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
+                            <a class="btn btn-dark container-fluid mb-1" href="createprojet.php" role="button">All your projet</a>
                         </div>
                     </div>
                 </div>
@@ -92,6 +94,7 @@
                                 </button>
                             </li>
                             <?php endforeach; ?>
+                            <a class="btn btn-dark container-fluid mb-1" href="createprojet.php" role="button">All projet</a>
                         </div>
                     </div>
                 </div>
