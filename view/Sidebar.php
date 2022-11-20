@@ -9,18 +9,6 @@
     <div class="p-4">
         <h1><a href="../public/main.php" class="logo">Organize, Create and Control</a></h1>
         <ul class="list-unstyled components mb-5">
-            <!-- <li class="active">
-      <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span class="fa fa-home mr-3"></span>
-        Users</a>
-    </li>
-    <li>
-      <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span class="fa fa-user mr-3"></span>
-        Your projet</a>
-    </li>
-    <li>
-      <a href="https://colorlib.com/etc/bootstrap-sidebar/sidebar-03/?#"><span
-          class="fa fa-briefcase mr-3"></span> All Projet</a>
-    </li> -->
 
             <div class="accordion" id="accordionPanelsStayOpenExample">
 
@@ -38,24 +26,21 @@
                         aria-labelledby="panelsStayOpen-headingOne">
                         <div class="accordion-body">
 
-                            <?php 
-                            if(5 < sizeof($Users))
-                            {
+                            <?php
+                            if (5 < sizeof($Users)) {
                                 $PreviewUsers = array_slice($Users, 0, 5, true);
-                            }
-                            else
-                            {
+                            } else {
                                 $PreviewUsers = $Users;
                             }
                             foreach ($PreviewUsers as $User_ID => $User): ?>
                             <li>
-                                <button type="button" class="btn btn-light container-fluid mb-1">
+                                <a href="edituser.php" role="button"
+                                    class="btn btn-light container-fluid mb-1 text-dark"">
                                     <?= $User['Username']; ?>
-                                </button>
+                            </a>
                             </li>
                             <?php endforeach;
-                            if(5 < sizeof($Users))
-                            {
+                            if (5 < sizeof($Users)) {
                                 echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllUsers.php\" role=\"button\">All user</a>";
                             }
                             ?>
@@ -63,36 +48,32 @@
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            Your Projet
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
-                        aria-labelledby="panelsStayOpen-headingTwo">
-                        <div class="accordion-body">
-                               <?php 
-                               //include(__DIR__ . '/../model/GetYourProject.php');
-                               if(5 < sizeof($OwnedProjects))
-                               {
+                <div class=" accordion-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
+                                            aria-controls="panelsStayOpen-collapseTwo">
+                                            Your Project
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                                        aria-labelledby="panelsStayOpen-headingTwo">
+                                        <div class="accordion-body">
+                                            <?php
+                            //include(__DIR__ . '/../model/GetYourProject.php');
+                            if (5 < sizeof($OwnedProjects)) {
                                 $YourProjects = array_slice($OwnedProjects, 0, 5, true);
-                               }
-                               else
-                               {
+                            } else {
                                 $YourProjects = $OwnedProjects;
-                               }
-                               foreach($YourProjects as $OwnedProject_ID =>$Project):?>
+                            }
+                            foreach ($YourProjects as $OwnedProject_ID => $Project): ?>
                             <li>
                                 <button type="button" class="btn btn-light container-fluid mb-1">
                                     <?= $Project['Title']; ?>
                                 </button>
                             </li>
                             <?php endforeach;
-                            if(5 < sizeof($OwnedProjects))
-                            {
+                            if (5 < sizeof($OwnedProjects)) {
                                 echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllYourProjects.php\" role=\"button\">All your projet</a>";
                             }
                             ?>
@@ -100,37 +81,34 @@
                     </div>
                 </div>
                 <div class="accordion-item"
-                style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">
+                    style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">
                     <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                             aria-controls="panelsStayOpen-collapseThree">
-                            All Projet
+                            All Project
                         </button>
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                         aria-labelledby="panelsStayOpen-headingThree">
                         <div class="accordion-body">
 
-                            <?php 
-                            if (5 < sizeof($Projects))
-                            {
+                            <?php
+                            if (5 < sizeof($Projects)) {
                                 $PreviewProjects = array_slice($Projects, 0, 5, true);
-                            }
-                            else
-                            {
+                            } else {
                                 $PreviewProjects = $Projects;
                             }
                             foreach ($PreviewProjects as $Project_ID => $Project): ?>
                             <li>
-                                <button type="button" class="btn btn-light container-fluid mb-1">
+                                <a href="project.php" role="button"
+                                    class="btn btn-light container-fluid mb-1 text-dark">
                                     <?= $Project['Title']; ?>
-                                </button>
+                                </a>
                             </li>
                             <?php endforeach;
-                            if(5 < sizeof($Projects))
-                            {
-                                echo"<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllProjects.php\" role=\"button\">All projet</a>";
+                            if (5 < sizeof($Projects)) {
+                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllProjects.php\" role=\"button\">All projet</a>";
                             }
                             ?>
                         </div>
@@ -141,8 +119,10 @@
 
         <div class="footer align-bottom">
             <div class="d-flex flex-row justify-content-around align-items-end bd-highlight mb-3">
-                <a class="btn btn-dark container-fluid" href="createuser.php" role="button" style="display : <?php echo 2 == $_SESSION['Privilege'] ? 'block' : 'none' ?>;">+ User</a>
-                <a class="btn btn-dark container-fluid" href="createprojet.php" role="button" style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">+ Projet</a>
+                <a class="btn btn-dark container-fluid" href="createuser.php" role="button"
+                    style="display : <?php echo 2 == $_SESSION['Privilege'] ? 'block' : 'none' ?>;">+ User</a>
+                <a class="btn btn-dark container-fluid" href="createproject.php" role="button"
+                    style="display : <?php echo 0 == $_SESSION['Privilege'] ? 'none' : 'block' ?>;">+ Project</a>
             </div>
         </div>
     </div>

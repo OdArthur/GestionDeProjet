@@ -7,29 +7,27 @@
   <title>OCC</title>
   <link rel="shortcut icon" href="../Assets/IconOCC.png" />
 
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
   <div class="wrapper d-flex align-items-stretch">
-
     <?php
-        include __DIR__ . '/../Sidebar.php';
-        ?>
+    include __DIR__ . '/../Sidebar.php';
+    ?>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-    <h2 class="mb-4">Create new user</h2>
-    <hr>
+      <h2 class="mb-4">Edit user: "user name"</h2>
+      <hr>
       <form method="POST" action="AddUser.php">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Username</label>
-          <input type="text" name="username" class="form-control" id="inputusername" aria-describedby="UsernameAre" required>
+          <input type="text" name="username" value="Current name" class="form-control" id="inputusername" aria-describedby="UsernameAre" required>
         </div>
         <div class="mb-3">
           <label for="inputpassword" class="form-label">Password</label>
           <input type="password" name="password" class="form-control" id="InputPassord" required>
-          <div id="username" class="form-text">We'll never share your Password with anyone else.</div>
+          <div id="username" class="form-text">Leave it blank if you don't want to change it.</div>
         </div>
         <div class="mb-3">
           <label for="inputpassword" class="form-label">Rôle</label>
@@ -42,9 +40,9 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Ajouter</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
       </form>
-    </div>
+  </div>
   </div>
 </body>
 
