@@ -22,8 +22,20 @@
 
             <hr>
             <div class=".container-lg p-3">
-                <div class="row">
-                    <div class="col-4">
+                <div> 
+                <?php foreach ($Projects as $Project_ID => $Project): 
+                    if($Project_ID%3==0){
+                        echo"</div>";
+                        echo"<div class='row'>";
+
+                    }?>
+                            <div class="col-4">
+                                <button type="button" class="btn btn-light container-fluid mb-1">
+                                    <?= $Project['Title']; ?>
+                                </button>
+                </div>
+                            <?php endforeach; ?>
+                   <!-- <div class="col-4">
                         <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
                             UserUser
                         </button>
@@ -84,7 +96,7 @@
                         <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
                             UserUser
                         </button>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
