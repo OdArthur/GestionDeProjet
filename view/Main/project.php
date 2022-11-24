@@ -18,8 +18,8 @@
         ?>
 
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Project: "Project name" manage by "manager name"</h2>
-            <p>I'm the project desctiption set by the manager of this project</p>
+            <h2 class="mb-4">Project: <?= $WorkingProject[0]['Title'] ?> managed by <?= $WorkingUser[0]['Username'] ?></h2>
+            <p><?= $WorkingProject[0]['Description'] ?></p>
             
             <div class="footer align-bottom">
             <div class="d-flex flex-row justify-content-around align-items-end bd-highlight mb-3">
