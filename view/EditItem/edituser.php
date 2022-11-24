@@ -17,12 +17,12 @@
     ?>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-      <h2 class="mb-4">Edit user: "user name"</h2>
+      <h2 class="mb-4">Edit user: <?= $WorkingUser[0]['Username'] ?></h2>
       <hr>
       <form method="POST" action="AddUser.php">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Username</label>
-          <input type="text" name="username" value="Current name" class="form-control" id="inputusername" aria-describedby="UsernameAre" required>
+          <input type="text" name="username" placeholder="<?= $WorkingUser[0]['Username'] ?>" class="form-control" id="inputusername" aria-describedby="UsernameAre" required>
         </div>
         <div class="mb-3">
           <label for="inputpassword" class="form-label">Password</label>
