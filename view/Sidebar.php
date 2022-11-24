@@ -34,10 +34,12 @@
                             }
                             foreach ($PreviewUsers as $User_ID => $User): ?>
                             <li>
-                                <a href="edituser.php" role="button"
-                                    class="btn btn-light container-fluid mb-1 text-dark"">
+                            <form action="edituser.php" method="POST">
+                                <button
+                                    class="btn btn-light container-fluid mb-1 text-dark" value="<?= $User['ID'] ?>" name="PassedUserId">
                                     <?= $User['Username']; ?>
-                            </a>
+                                </button>
+                            </form>
                             </li>
                             <?php endforeach;
                             if (5 < sizeof($Users)) {
@@ -68,9 +70,12 @@
                             }
                             foreach ($YourProjects as $OwnedProject_ID => $Project): ?>
                             <li>
-                                <button type="button" class="btn btn-light container-fluid mb-1">
+                            <form action="project.php" method="POST">
+                                <button 
+                                    class="btn btn-light container-fluid mb-1 text-dark" value="<?= $Project['ID'] ?>" name="PassedProjectId">
                                     <?= $Project['Title']; ?>
                                 </button>
+                            </form>
                             </li>
                             <?php endforeach;
                             if (5 < sizeof($OwnedProjects)) {
@@ -101,10 +106,12 @@
                             }
                             foreach ($PreviewProjects as $Project_ID => $Project): ?>
                             <li>
-                                <a href="project.php" role="button"
-                                    class="btn btn-light container-fluid mb-1 text-dark">
-                                    <?= $Project['Title']; ?>
-                                </a>
+                                <form action="project.php" method="POST">
+                                    <button
+                                        class="btn btn-light container-fluid mb-1 text-dark" value="<?= $Project['ID'] ?>" name="PassedProjectId">
+                                        <?= $Project['Title']; ?>
+                                    </button>
+                                </form>
                             </li>
                             <?php endforeach;
                             if (5 < sizeof($Projects)) {
