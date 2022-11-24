@@ -24,7 +24,7 @@
             <div class="footer align-bottom">
             <div class="d-flex flex-row justify-content-around align-items-end bd-highlight mb-3">
             <a href="editproject.php" role="button" class="btn btn-primary d-grid gap-2 col-3 mx-auto">Edit</a>
-            <a href="editproject.php" role="button" class="btn btn-primary d-grid gap-2 col-3 mx-auto">remove</a>
+            <a href="editproject.php" role="button" class="btn btn-primary d-grid gap-2 col-3 mx-auto">Remove</a>
             </div>
             </div>
         </div>

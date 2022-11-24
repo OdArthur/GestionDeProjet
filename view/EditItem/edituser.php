@@ -30,10 +30,10 @@
           <div id="username" class="form-text">Leave it blank if you don't want to change it.</div>
         </div>
         <div class="mb-3">
-          <label for="inputpassword" class="form-label">Rôle</label>
+          <label for="inputpassword" class="form-label">Role</label>
           <div class="mb-3 form-check">
             <select name="privilege" class="form-select" aria-label="Default select grade">
-              <option selected value="0">Employé</option>
+              <option selected value="0">Employee</option>
               <option value="1">Manager</option>
               <option value="2  ">Admin</option>
             </select>
