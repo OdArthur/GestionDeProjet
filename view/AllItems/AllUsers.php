@@ -30,9 +30,11 @@
 
                         }?>
                             <div class="col-4">
-                                <button type="button" class="btn btn-light container-fluid mb-1">
-                                    <?= $User['Username']; ?>
-                                </button>
+                                <form action="edituser.php" method="POST">
+                                    <button class="btn btn-light container-fluid mb-1 text-dark" value="<?= $User['ID'] ?>" name="PassedUserId">
+                                        <?= $User['Username']; ?>
+                                    </button>
+                                </form>
                             </div>
                     <?php endforeach; ?>
                 </div>

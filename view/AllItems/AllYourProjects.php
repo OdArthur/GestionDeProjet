@@ -30,9 +30,11 @@
 
                         }?>
                             <div class="col-4">
-                                <button type="button" class="btn btn-light container-fluid mb-1">
+                                <form action="project.php" method="POST">
+                                    <button class="btn btn-light container-fluid mb-1" value="<?= $Project['ID'] ?>" name="PassedProjectId">
                                     <?= $Project['Title']; ?>
-                                </button>
+                                    </button>
+                                </form>
                             </div>
                     <?php endforeach; ?>
                 </div>

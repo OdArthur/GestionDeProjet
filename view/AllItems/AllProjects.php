@@ -37,68 +37,6 @@
                                 </form>
                 </div>
                             <?php endforeach; ?>
-                   <!-- <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUserUser
-                        </button>
-                    </div>
-                    <div class="col-4">
-                        <button type="button" class="btn btn-light container-fluid mb-1 text-wrap text-break">
-                            UserUser
-                        </button>
-                    </div>-->
                 </div>
             </div>
         </div>
