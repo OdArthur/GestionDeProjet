@@ -19,8 +19,16 @@
 
         <div id="content" class="p-4 p-md-5 pt-5">
             <h2 class="mb-4">Project: <?= $WorkingProject[0]['Title'] ?> managed by <?= $WorkingUser[0]['Username'] ?></h2>
+            <hr>
             <p><?= $WorkingProject[0]['Description'] ?></p>
             
+            <div id=GanttArea>
+
+            </div>
+            <hr>
+            <h3 class="mb-4">Your Task on this Projet</h3>
+            <h4 class="mb-4">Task name: Time start - Time end</h4>
+
             <div class="footer align-bottom">
             <div class="d-flex flex-row justify-content-around align-items-end bd-highlight mb-3">
             <a href="editproject.php" role="button" class="btn btn-primary d-grid gap-2 col-3 mx-auto">Edit</a>
