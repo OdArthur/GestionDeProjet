@@ -80,7 +80,7 @@
                             </li>
                             <?php endforeach;
                             if (5 < sizeof($OwnedProjects)) {
-                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllYourProjects.php\" role=\"button\">All your projet</a>";
+                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllYourProjects.php\" role=\"button\">All your projects</a>";
                             }
                             ?>
                         </div>
@@ -116,7 +116,7 @@
                             </li>
                             <?php endforeach;
                             if (5 < sizeof($Projects)) {
-                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllProjects.php\" role=\"button\">All projet</a>";
+                                echo "<a class=\"btn btn-dark container-fluid mb-1\" href=\"AllProjects.php\" role=\"button\">All projects</a>";
                             }
                             ?>
                         </div>
