@@ -17,28 +17,37 @@
     ?>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-      <h2 class="mb-4">Edit projet: "project name"</h2>
+      <h2 class="mb-4">Edit projet: <?= $WorkingProject[0]['Title'] ?></h2>
       <hr>
-      <form method="POST" action="AddProject.php">
+      <form method="POST" action="editproject.php">
         <div class="mb-3">
           <label for="ProjetName" class="form-label">Project name</label>
-          <input type="text" value="Current name" name="Title" class="form-control" id="inputprojectname"
+          <input type="text" placeholder="<?= $WorkingProject[0]['Title'] ?>" name="Title" class="form-control" id="inputprojectname"
             aria-describedby="ProjectName">
         </div>
         <div class="mb-3">
           <label for="ProjetDescription" class="form-label">Project Description</label>
-          <input type="text" value="Current Description" name="Description" class="form-control"
+          <input type="text" placeholder="<?= $WorkingProject[0]['Description'] ?>" name="Description" class="form-control"
             id="inputprojetdescription" aria-describedby="ProjetDescrip">
         </div>
         <div class="mb-3">
         <label for="ProjetOwner" class="form-label">Manager of project</label>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Current Owner</option>
-          <option value="1">Manager name 1</option>
-          <option value="2">Manager name 2</option>
-          <option value="3">Manager name 3</option>
+        <select class="form-select" aria-label="Default select example" name="Owner_ID">
+          <?php foreach($Managers as $Manager_ID => $Manager ):
+            echo"<option ";
+            if($Manager['ID'] == $WorkingProject[0]['Owner_ID'])
+            {
+              echo"selected ";
+            }
+            echo "value=" . $Manager['ID'];
+            echo ">" . $Manager['Username'] . "</option>";
+          endforeach; ?>
         </select>
         </div>
+
+        <input type="hidden" name="PastTitle" value="<?= $WorkingProject[0]['Title'] ?>">
+        <input type="hidden" name="PastDescription" value="<?= $WorkingProject[0]['Description'] ?>">
+        <input type="hidden" name="ProjectID" value="<?= $WorkingProject[0]['ID'] ?>">
 
     <button type="submit" class="btn btn-primary">Edit</button>
 
