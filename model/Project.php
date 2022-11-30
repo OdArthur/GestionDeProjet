@@ -16,3 +16,13 @@ $query->execute([
     );
 
 $WorkingUser = $query->fetchAll();
+
+function RemoveProject($dbh, $ProjectID)
+{
+$query = $dbh->prepare('DELETE FROM project WHERE `project`.`ID` = :ID');
+return $query->execute(
+    [
+        ':ID' => $ProjectID
+    ]
+    );
+}
