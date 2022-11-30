@@ -28,9 +28,10 @@
 
                             <?php
                             if (5 < sizeof($Users)) {
-                                $PreviewUsers = array_slice($Users, 0, 5, true);
+                                $PreviewUsers = array_reverse(array_slice($Users, count($Users) - 5, count($Users), true));
+
                             } else {
-                                $PreviewUsers = $Users;
+                                $PreviewUsers = array_reverse($Users);
                             }
                             foreach ($PreviewUsers as $User_ID => $User): ?>
                             <li>
@@ -64,9 +65,9 @@
                                             <?php
                             //include(__DIR__ . '/../model/GetYourProject.php');
                             if (5 < sizeof($OwnedProjects)) {
-                                $YourProjects = array_slice($OwnedProjects, 0, 5, true);
+                                $YourProjects = array_reverse(array_slice($OwnedProjects, count($OwnedProjects) - 5, count($OwnedProjects), true));
                             } else {
-                                $YourProjects = $OwnedProjects;
+                                $YourProjects = array_reverse($OwnedProjects);
                             }
                             foreach ($YourProjects as $OwnedProject_ID => $Project): ?>
                             <li>
@@ -100,9 +101,9 @@
 
                             <?php
                             if (5 < sizeof($Projects)) {
-                                $PreviewProjects = array_slice($Projects, 0, 5, true);
+                                $PreviewProjects = array_reverse(array_slice($Projects, count($Projects) - 5, count($Projects), true));
                             } else {
-                                $PreviewProjects = $Projects;
+                                $PreviewProjects = array_reverse($Projects);
                             }
                             foreach ($PreviewProjects as $Project_ID => $Project): ?>
                             <li>
