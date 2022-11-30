@@ -23,7 +23,9 @@
             <hr>
             <div class=".container-lg p-3">
                 <div>
-                    <?php foreach ($Users as $User_ID => $User): 
+                    <?php
+                    $Users = array_reverse($Users);
+                    foreach ($Users as $User_ID => $User): 
                         if($User_ID%3==0){
                             echo"</div>";
                             echo"<div class='row'>";

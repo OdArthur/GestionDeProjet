@@ -23,7 +23,9 @@
             <hr>
             <div class=".container-lg p-3">
                 <div> 
-                <?php foreach ($Projects as $Project_ID => $Project): 
+                <?php 
+                $Projects = array_reverse($Projects);
+                foreach ($Projects as $Project_ID => $Project): 
                     if($Project_ID%3==0){
                         echo"</div>";
                         echo"<div class='row'>";
