@@ -70,7 +70,7 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+                                        Are you sure about that ?
                                     </div>
                                     <div class="modal-footer">
                                     <button class="btn btn-primary d-grid" name="Remove">Remove</button>

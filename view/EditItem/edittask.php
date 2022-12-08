@@ -38,6 +38,8 @@
         <input type="hidden" name="ProjectID" value="<?= $WorkingProject[0]['ID'] ?>">
 
         <button type="submit" class="btn btn-primary">Edit</button>
+        <button class="btn btn-primary d-grid" name="Remove">Remove</button>
+        <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
       </form>
 
 
