@@ -1,7 +1,4 @@
 <?php
-
-
-
 function createProject($dbh, $project) {
 
         $query = $dbh->prepare('INSERT INTO project (Title, Description, Owner_ID, CreationDate) VALUES (:Title, :Description, :Owner_ID, :CreationDate)');

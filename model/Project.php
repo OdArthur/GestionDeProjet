@@ -54,3 +54,15 @@ function UpdateProject($dbh, $Project)
     ]
     );
 }
+
+function GetProjectTasks($dbh, $ID)
+{
+    $query = $dbh->prepare('SELECT * FROM `task` WHERE task.Project_ID=:ID');
+
+    $query->execute(
+    [
+    ':ID' => $ID
+    ]
+    );
+    return $query->fetchAll();
+}

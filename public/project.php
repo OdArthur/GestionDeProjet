@@ -11,6 +11,7 @@ include(__DIR__ . '/../model/Project.php');
 
 $WorkingProject = GetProject($dbh, $_POST['PassedProjectId']);
 $WorkingUser = GetOwner($dbh, $WorkingProject[0]['Owner_ID']);
+$ProjectTasks = GetProjectTasks($dbh, $_POST['PassedProjectId']);
 
 // include view
 include(__DIR__ . '/../css/cssimport.php');

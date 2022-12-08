@@ -81,6 +81,27 @@
                         </div>
                     </form>
                 </div>
+
+                <div class=".container-lg p-3">
+                    <div> 
+                    <?php 
+                    $ProjectTasks = array_reverse($ProjectTasks);
+                    foreach ($ProjectTasks as $Task_ID => $Task): 
+                        if($Task_ID%3==0){
+                            echo"</div>";
+                            echo"<div class='row'>";
+
+                        }?>
+                                <div class="col-4">
+                                    <form action="edittask.php" method="POST">
+                                        <button class="btn btn-light container-fluid mb-1" value="<?= $Task['ID'] ?>" name="PassedTaskId">
+                                            <?= $Task['Title']; ?>
+                                        </button>
+                                    </form>
+                    </div>
+                                <?php endforeach; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
