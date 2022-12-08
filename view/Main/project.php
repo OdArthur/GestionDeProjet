@@ -20,7 +20,7 @@
     .main { padding: 10px; margin-top: 10px; }
   </style> -->
 
-  <script src="../view/Gantt/js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
+    <script src="../view/Gantt/js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
 
 </head>
 
@@ -54,8 +54,31 @@
                         <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
                     </form>
                     <form method="POST" action="editproject.php">
-                        <button class="btn btn-primary d-grid" name="Remove">Remove</button>
-                        <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
+                        <!-- <button class="btn btn-primary d-grid" name="Remove">Remove</button> -->
+                        <!-- <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>"> -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#removemodal">
+                            Remove
+                        </button>
+                        <!-- Remove Modal -->
+                        <div class="modal fade" id="removemodal" tabindex="-1" aria-labelledby="removemodalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="removemodalLabel">Confirme Remove</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button class="btn btn-primary d-grid" name="Remove">Remove</button>
+                                    <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
