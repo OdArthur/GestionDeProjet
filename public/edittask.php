@@ -27,6 +27,8 @@ else if(isset($_POST['Remove']))
 else
 {
     $WorkingTask = GetSpecificTask($dbh, $_POST['PassedTaskId']);
+    $WorkingUsers = GetTaskUsers($dbh, $_POST['PassedTaskId']);
+    $MissingUsers = GetMissingUsers($dbh, $WorkingUsers);
 
     // include view
     include(__DIR__ . '/../css/cssimport.php');

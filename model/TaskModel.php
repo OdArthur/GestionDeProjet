@@ -40,3 +40,37 @@ function UpdateTask($dbh, $Task)
     ]
     );
 }
+
+function GetTaskUsers($dbh, $TaskID)
+{
+    $query = $dbh->prepare('SELECT users.ID, users.Username
+                            FROM users
+                            INNER JOIN userstasks
+                            ON users.ID = userstasks.user_ID
+                            WHERE userstasks.task_ID=:ID;');
+    $query->execute([
+        
+        ':ID' => $TaskID]
+    );
+    return $query->fetchAll();
+}
+
+function GetMissingUsers($dbh, $Users)
+{
+    $query = $dbh->prepare('SELECT users.ID, users.Username FROM users;');
+    $query->execute();
+    $AllUsers = $query->fetchAll();
+
+    foreach($Users as $user)
+    {
+        foreach($AllUsers as $UserID =>$CheckingUser)
+        {
+            if($user == $CheckingUser)
+            {
+                unset($AllUsers[$UserID]);
+            }
+        }
+    }
+
+    return $AllUsers;
+}

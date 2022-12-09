@@ -47,13 +47,8 @@
         <div class="mb-3">
           <label for="ProjetOwner" class="form-label">Add user</label>
           <select class="form-select" aria-label="Default select example" name="Owner_ID">
-            <?php foreach ($Managers as $Manager_ID => $Manager):
-            echo "<option ";
-            if ($Manager['ID'] == $WorkingTask[0]['Owner_ID']) {
-              echo "selected ";
-            }
-            echo "value=" . $Manager['ID'];
-            echo ">" . $Manager['Username'] . "</option>";
+            <?php foreach ($MissingUsers as $User_ID => $User):
+            echo "<option value=" . $User['ID'] . ">" . $User['Username'] . "</option>";
           endforeach; ?>
           </select>
         </div>
@@ -65,13 +60,8 @@
         <div class="mb-3">
           <label for="ProjetOwner" class="form-label">Remove user</label>
           <select class="form-select" aria-label="Default select example" name="Owner_ID">
-            <?php foreach ($Managers as $Manager_ID => $Manager):
-            echo "<option ";
-            if ($Manager['ID'] == $WorkingTask[0]['Owner_ID']) {
-              echo "selected ";
-            }
-            echo "value=" . $Manager['ID'];
-            echo ">" . $Manager['Username'] . "</option>";
+          <?php foreach ($WorkingUsers as $User_ID => $User):
+            echo "<option value=" . $User['ID'] . ">" . $User['Username'] . "</option>";
           endforeach; ?>
           </select>
         </div>
