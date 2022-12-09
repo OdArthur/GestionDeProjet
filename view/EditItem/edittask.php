@@ -34,6 +34,8 @@
 
         <button class="btn btn-primary" name="Edit">Edit</button>
         <input type="hidden" name="PassedTaskId" value="<?= $WorkingTask[0]['ID'] ?>">
+        <input type="hidden" name="PastTitle" value="<?= $WorkingTask[0]['Title'] ?>">
+        <input type="hidden" name="PastDescription" value="<?= $WorkingTask[0]['Description'] ?>">
       </form>
 
       <form method="POST" action="edittask.php">

@@ -25,3 +25,18 @@ function GetSpecificTask($dbh, $taskID)
         );
         return $query->fetchAll();
 }
+
+function UpdateTask($dbh, $Task)
+{
+    $query = $dbh->prepare('UPDATE task AS t
+    SET t.Title = :NewTitle, t.Description = :NewDescription
+    WHERE t.ID = :TaskID;');
+
+    return $query->execute(
+    [
+    ':TaskID' => $Task['ID'],
+    ':NewTitle' => $Task['Title'],
+    ':NewDescription' => $Task['Description']
+    ]
+    );
+}
