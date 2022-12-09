@@ -7,16 +7,16 @@ include(__DIR__ . '/../database/db.php');
 include(__DIR__ . '/../model/SidebarDB.php');
 include(__DIR__ . '/../model/Project.php');
 
-if(isset($_POST['Edit']))
-{
-    $WorkingProject = GetProject($dbh, $_POST['PassedProjectId']);
-    $WorkingUser = GetOwner($dbh, $WorkingProject[0]['Owner_ID']);
-    $Managers = GetManagers($dbh);
-    // include view
-    include(__DIR__ . '/../css/cssimport.php');
-    include(__DIR__ . '/../view/EditItem/editproject.php');
-    include(__DIR__ . '/../javascript/jsimport.php');
-}
+// if(isset($_POST['Edit']))
+// {
+//     $WorkingProject = GetProject($dbh, $_POST['PassedProjectId']);
+//     $WorkingUser = GetOwner($dbh, $WorkingProject[0]['Owner_ID']);
+//     $Managers = GetManagers($dbh);
+//     // include view
+//     include(__DIR__ . '/../css/cssimport.php');
+//     include(__DIR__ . '/../view/EditItem/editproject.php');
+//     include(__DIR__ . '/../javascript/jsimport.php');
+// }
 
 if(isset($_POST['Remove']))
 {

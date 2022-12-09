@@ -5,25 +5,27 @@ include(__DIR__ . '/../view/checkconnection.php');
 include(__DIR__ . '/../database/db.php');
 // include model
 include(__DIR__ . '/../model/SidebarDB.php');
-include(__DIR__ . '/../model/User.php');
+include(__DIR__ . '/../model/TaskModel.php');
 
-if(isset($_POST['username']))
+if(isset($_POST['Edit']))
 {
-    $User = [
-        'ID' => htmlspecialchars($_POST['PassedUserId']),
-        'Username' => htmlspecialchars('' == $_POST['username'] ? $_POST['PastUsername'] : $_POST['username']),
-        'Password' => htmlspecialchars($_POST['password']),
-        'Privilege' => htmlspecialchars($_POST['privilege'])
-    ];
+    $WorkingProject = GetProject($dbh, $_POST['PassedProjectId']);
+    $WorkingUser = GetOwner($dbh, $WorkingProject[0]['Owner_ID']);
+    $Managers = GetManagers($dbh);
+    // include view
+    include(__DIR__ . '/../css/cssimport.php');
+    include(__DIR__ . '/../view/EditItem/editproject.php');
+    include(__DIR__ . '/../javascript/jsimport.php');
+}
 
-    $result = UpdateSpecificUser($dbh, $User, '' == $_POST['password'] ? false : true);
-
+if(isset($_POST['Remove']))
+{
+    RemoveSpecificTask($dbh, $_POST['PassedTaskId']);
     header('Location: main.php');
 }
 else
 {
-    $tempUserID = $_POST['PassedUserId'];
-    $WorkingUser = GetSpecificUser($dbh, $tempUserID);
+    $WorkingTask = GetSpecificTask($dbh, $_POST['PassedTaskId']);
 
     // include view
     include(__DIR__ . '/../css/cssimport.php');

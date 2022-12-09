@@ -17,31 +17,29 @@
     ?>
 
     <div id="content" class="p-4 p-md-5 pt-5">
-      <h2 class="mb-4">Edit projet: <?= $WorkingProject[0]['Title'] ?>
+      <h2 class="mb-4">Edit task: <?= $WorkingTask[0]['Title'] ?>
       </h2>
       <hr>
-      <form method="POST" action="editproject.php">
+      <form method="POST" action="edittask.php">
         <div class="mb-3">
           <label for="ProjetName" class="form-label">Task name</label>
-          <input type="text" placeholder="<?= $WorkingProject[0]['Title'] ?>" name="Title" class="form-control"
+          <input type="text" placeholder="<?= $WorkingTask[0]['Title'] ?>" name="Title" class="form-control"
             id="inputprojectname" aria-describedby="ProjectName">
         </div>
         <div class="mb-3">
           <label for="ProjetDescription" class="form-label">Task Description</label>
-          <input type="text" placeholder="<?= $WorkingProject[0]['Description'] ?>" name="Description"
+          <input type="text" placeholder="<?= $WorkingTask[0]['Description'] ?>" name="Description"
             class="form-control" id="inputprojetdescription" aria-describedby="ProjetDescrip">
         </div>
-        
 
-        <input type="hidden" name="PastTitle" value="<?= $WorkingProject[0]['Title'] ?>">
-        <input type="hidden" name="PastDescription" value="<?= $WorkingProject[0]['Description'] ?>">
-        <input type="hidden" name="ProjectID" value="<?= $WorkingProject[0]['ID'] ?>">
-
-        <button type="submit" class="btn btn-primary">Edit</button>
-        <button class="btn btn-primary d-grid" name="Remove">Remove</button>
-        <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
+        <button class="btn btn-primary" name="Edit">Edit</button>
+        <input type="hidden" name="PassedTaskId" value="<?= $WorkingTask[0]['ID'] ?>">
       </form>
 
+      <form method="POST" action="edittask.php">
+      <input type="hidden" name="PassedTaskId" value="<?= $WorkingTask[0]['ID'] ?>">
+      <button class="btn btn-primary d-grid" name="Remove">Remove</button>
+      </form>
 
       <form>
         <div class="mb-3">
@@ -49,7 +47,7 @@
           <select class="form-select" aria-label="Default select example" name="Owner_ID">
             <?php foreach ($Managers as $Manager_ID => $Manager):
             echo "<option ";
-            if ($Manager['ID'] == $WorkingProject[0]['Owner_ID']) {
+            if ($Manager['ID'] == $WorkingTask[0]['Owner_ID']) {
               echo "selected ";
             }
             echo "value=" . $Manager['ID'];
@@ -67,7 +65,7 @@
           <select class="form-select" aria-label="Default select example" name="Owner_ID">
             <?php foreach ($Managers as $Manager_ID => $Manager):
             echo "<option ";
-            if ($Manager['ID'] == $WorkingProject[0]['Owner_ID']) {
+            if ($Manager['ID'] == $WorkingTask[0]['Owner_ID']) {
               echo "selected ";
             }
             echo "value=" . $Manager['ID'];

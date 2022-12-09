@@ -1,15 +1,18 @@
 <?php
-
-
 function RemoveSpecificTask($dbh, $taskID)
 {
-    $query = $dbh->prepare('DELETE userstaks AS ut
-                                    WHERE ut.task_ID = :taskID;');
+    $query = $dbh->prepare('DELETE userstasks WHERE userstasks.task_ID = :taskID;');
        
-    return $query->execute([
+    $query->execute([
                 
         ':taskID' => $taskID]
     );
+
+    $query = $dbh->prepare('DELETE task WHERE task.ID = :taskID;');
+
+    return $query->execute([
+        ':taskID' => $taskID
+    ]);
 }
 
 
