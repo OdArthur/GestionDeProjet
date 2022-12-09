@@ -66,7 +66,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="removemodalLabel">Confirme Remove</h5>
+                                        <h5 class="modal-title" id="removemodalLabel">Confirm Remove</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -81,6 +81,11 @@
                         </div>
                     </form>
                 </div>
+
+                <form method="POST" action="createtask.php">
+                    <button class="btn btn-dark container-fluid" name="AddTask">+ Task</button>
+                    <input type="hidden" name="PassedProjectId" value="<?= $WorkingProject[0]['ID'] ?>">
+                </form>
 
                 <div class=".container-lg p-3">
                     <div> 
