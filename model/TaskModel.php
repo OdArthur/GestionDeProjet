@@ -1,14 +1,14 @@
 <?php
 function RemoveSpecificTask($dbh, $taskID)
 {
-    $query = $dbh->prepare('DELETE userstasks WHERE userstasks.task_ID = :taskID;');
+    $query = $dbh->prepare('DELETE FROM userstasks WHERE userstasks.task_ID = :taskID;');
        
     $query->execute([
                 
         ':taskID' => $taskID]
     );
 
-    $query = $dbh->prepare('DELETE task WHERE task.ID = :taskID;');
+    $query = $dbh->prepare('DELETE FROM task WHERE task.ID = :taskID;');
 
     return $query->execute([
         ':taskID' => $taskID
@@ -73,4 +73,24 @@ function GetMissingUsers($dbh, $Users)
     }
 
     return $AllUsers;
+}
+
+function AddUserOnTask($dbh, $UserID, $TaskID)
+{
+    $query = $dbh->prepare('INSERT INTO userstasks (user_ID, task_ID) VALUES (:user_ID, :task_ID)');
+    return $query->execute([
+        ':user_ID' => $UserID,
+        ':task_ID'=> $TaskID
+    ]);
+}
+
+function RemoveUserOnTask($dbh, $UserID, $TaskID)
+{
+    $query = $dbh->prepare('DELETE FROM userstasks WHERE userstasks.user_ID=:UserID AND userstasks.task_ID=:TaskID;');
+       
+    return $query->execute([
+                
+        ':TaskID' => $TaskID,
+        ':UserID' => $UserID
+        ]);
 }

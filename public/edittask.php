@@ -24,6 +24,16 @@ else if(isset($_POST['Remove']))
     RemoveSpecificTask($dbh, $_POST['PassedTaskId']);
     header('Location: main.php');
 }
+else if(isset($_POST['AddUser']))
+{
+    AddUserOnTask($dbh, $_POST['User_ID'], $_POST['PassedTaskId']);
+    header('Location: main.php');
+}
+else if(isset($_POST['RemoveUser']))
+{
+    RemoveUserOnTask($dbh, $_POST['User_ID'] ,$_POST['PassedTaskId']);
+    header('Location: main.php');
+}
 else
 {
     $WorkingTask = GetSpecificTask($dbh, $_POST['PassedTaskId']);

@@ -43,29 +43,31 @@
       <button class="btn btn-primary d-grid" name="Remove">Remove</button>
       </form>
 
-      <form>
+      <form method="POST" action="edittask.php">
         <div class="mb-3">
           <label for="ProjetOwner" class="form-label">Add user</label>
-          <select class="form-select" aria-label="Default select example" name="Owner_ID">
+          <select class="form-select" aria-label="Default select example" name="User_ID">
             <?php foreach ($MissingUsers as $User_ID => $User):
             echo "<option value=" . $User['ID'] . ">" . $User['Username'] . "</option>";
           endforeach; ?>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Add</button>
+        <input type="hidden" name="PassedTaskId" value="<?= $WorkingTask[0]['ID'] ?>">
+        <button class="btn btn-primary" name="AddUser">Add</button>
       </form>
 
 
-      <form>
+      <form method="POST" action="edittask.php">
         <div class="mb-3">
           <label for="ProjetOwner" class="form-label">Remove user</label>
-          <select class="form-select" aria-label="Default select example" name="Owner_ID">
+          <select class="form-select" aria-label="Default select example" name="User_ID">
           <?php foreach ($WorkingUsers as $User_ID => $User):
             echo "<option value=" . $User['ID'] . ">" . $User['Username'] . "</option>";
           endforeach; ?>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Remove</button>
+        <input type="hidden" name="PassedTaskId" value="<?= $WorkingTask[0]['ID'] ?>">
+        <button class="btn btn-primary" name="RemoveUser">Remove</button>
       </form>
 
     </div>
